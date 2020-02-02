@@ -10,8 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// This is the code for your desktop app.
-// Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
+
 
 namespace Contact_Form
 {
@@ -45,6 +44,7 @@ namespace Contact_Form
         private void btnEdit_Click(object sender, EventArgs e)
         {
             groupBox1.Enabled = true;
+            
             custID.Focus();
 
         }
