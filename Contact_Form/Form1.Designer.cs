@@ -28,30 +28,33 @@ namespace Contact_Form
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.bntCancel = new System.Windows.Forms.Button();
+            this.bntUpdate = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.custID = new System.Windows.Forms.TextBox();
+            this.custFn = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.custLn = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.custAdd = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.custSt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.custZip = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.custPh = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -65,19 +68,19 @@ namespace Contact_Form
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox8);
+            this.groupBox1.Controls.Add(this.custPh);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.custZip);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.custSt);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.custAdd);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.custLn);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.custFn);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.custID);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -85,41 +88,45 @@ namespace Contact_Form
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Location = new System.Drawing.Point(12, 243);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "New";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(12, 243);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 1;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // button2
+            // btnEdit
             // 
-            this.button2.Location = new System.Drawing.Point(93, 243);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Edit";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEdit.Location = new System.Drawing.Point(93, 243);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 2;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // button3
+            // bntCancel
             // 
-            this.button3.Location = new System.Drawing.Point(174, 243);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Cancel";
-            this.button3.UseVisualStyleBackColor = true;
+            this.bntCancel.Location = new System.Drawing.Point(174, 243);
+            this.bntCancel.Name = "bntCancel";
+            this.bntCancel.Size = new System.Drawing.Size(75, 23);
+            this.bntCancel.TabIndex = 3;
+            this.bntCancel.Text = "Cancel";
+            this.bntCancel.UseVisualStyleBackColor = true;
+            this.bntCancel.Click += new System.EventHandler(this.bntCancel_Click);
             // 
-            // button4
+            // bntUpdate
             // 
-            this.button4.Location = new System.Drawing.Point(255, 243);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Update";
-            this.button4.UseVisualStyleBackColor = true;
+            this.bntUpdate.Location = new System.Drawing.Point(255, 243);
+            this.bntUpdate.Name = "bntUpdate";
+            this.bntUpdate.Size = new System.Drawing.Size(75, 23);
+            this.bntUpdate.TabIndex = 4;
+            this.bntUpdate.Text = "Update";
+            this.bntUpdate.UseVisualStyleBackColor = true;
+            this.bntUpdate.Click += new System.EventHandler(this.bntUpdate_Click);
             // 
             // button5
             // 
@@ -129,6 +136,7 @@ namespace Contact_Form
             this.button5.TabIndex = 7;
             this.button5.Text = "Search";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // textBox1
             // 
@@ -146,19 +154,21 @@ namespace Contact_Form
             this.label1.TabIndex = 0;
             this.label1.Text = "Customer ID:";
             // 
-            // textBox2
+            // custID
             // 
-            this.textBox2.Location = new System.Drawing.Point(101, 15);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(191, 22);
-            this.textBox2.TabIndex = 0;
+            this.custID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "CustomerID", true));
+            this.custID.Location = new System.Drawing.Point(101, 15);
+            this.custID.Name = "custID";
+            this.custID.Size = new System.Drawing.Size(191, 22);
+            this.custID.TabIndex = 0;
             // 
-            // textBox3
+            // custFn
             // 
-            this.textBox3.Location = new System.Drawing.Point(101, 43);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(191, 22);
-            this.textBox3.TabIndex = 1;
+            this.custFn.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "First_name", true));
+            this.custFn.Location = new System.Drawing.Point(101, 43);
+            this.custFn.Name = "custFn";
+            this.custFn.Size = new System.Drawing.Size(191, 22);
+            this.custFn.TabIndex = 1;
             // 
             // label2
             // 
@@ -169,12 +179,13 @@ namespace Contact_Form
             this.label2.TabIndex = 2;
             this.label2.Text = "First Name:";
             // 
-            // textBox4
+            // custLn
             // 
-            this.textBox4.Location = new System.Drawing.Point(101, 71);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(191, 22);
-            this.textBox4.TabIndex = 2;
+            this.custLn.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Last_Name", true));
+            this.custLn.Location = new System.Drawing.Point(101, 71);
+            this.custLn.Name = "custLn";
+            this.custLn.Size = new System.Drawing.Size(191, 22);
+            this.custLn.TabIndex = 2;
             // 
             // label3
             // 
@@ -185,13 +196,14 @@ namespace Contact_Form
             this.label3.TabIndex = 4;
             this.label3.Text = "Last Name:";
             // 
-            // textBox5
+            // custAdd
             // 
-            this.textBox5.Location = new System.Drawing.Point(99, 99);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(191, 79);
-            this.textBox5.TabIndex = 3;
+            this.custAdd.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Address", true));
+            this.custAdd.Location = new System.Drawing.Point(99, 99);
+            this.custAdd.Multiline = true;
+            this.custAdd.Name = "custAdd";
+            this.custAdd.Size = new System.Drawing.Size(191, 79);
+            this.custAdd.TabIndex = 3;
             // 
             // label4
             // 
@@ -202,12 +214,13 @@ namespace Contact_Form
             this.label4.TabIndex = 6;
             this.label4.Text = "Address:";
             // 
-            // textBox6
+            // custSt
             // 
-            this.textBox6.Location = new System.Drawing.Point(391, 100);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(140, 22);
-            this.textBox6.TabIndex = 4;
+            this.custSt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "State", true));
+            this.custSt.Location = new System.Drawing.Point(391, 100);
+            this.custSt.Name = "custSt";
+            this.custSt.Size = new System.Drawing.Size(140, 22);
+            this.custSt.TabIndex = 4;
             // 
             // label5
             // 
@@ -218,12 +231,13 @@ namespace Contact_Form
             this.label5.TabIndex = 8;
             this.label5.Text = "State:";
             // 
-            // textBox7
+            // custZip
             // 
-            this.textBox7.Location = new System.Drawing.Point(391, 128);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(140, 22);
-            this.textBox7.TabIndex = 5;
+            this.custZip.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Zipcode", true));
+            this.custZip.Location = new System.Drawing.Point(391, 128);
+            this.custZip.Name = "custZip";
+            this.custZip.Size = new System.Drawing.Size(140, 22);
+            this.custZip.TabIndex = 5;
             // 
             // label6
             // 
@@ -234,12 +248,13 @@ namespace Contact_Form
             this.label6.TabIndex = 10;
             this.label6.Text = "Zipcode:";
             // 
-            // textBox8
+            // custPh
             // 
-            this.textBox8.Location = new System.Drawing.Point(391, 156);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(140, 22);
-            this.textBox8.TabIndex = 6;
+            this.custPh.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "Phone", true));
+            this.custPh.Location = new System.Drawing.Point(391, 156);
+            this.custPh.Name = "custPh";
+            this.custPh.Size = new System.Drawing.Size(140, 22);
+            this.custPh.TabIndex = 6;
             // 
             // label7
             // 
@@ -250,6 +265,10 @@ namespace Contact_Form
             this.label7.TabIndex = 12;
             this.label7.Text = "Phone:";
             // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataSource = typeof(Contact_Form.Customer);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -257,19 +276,22 @@ namespace Contact_Form
             this.ClientSize = new System.Drawing.Size(806, 484);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bntUpdate);
+            this.Controls.Add(this.bntCancel);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Customer Input";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,26 +301,27 @@ namespace Contact_Form
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox custPh;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox custZip;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox custSt;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox custAdd;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox custLn;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox custFn;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox custID;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button bntCancel;
+        private System.Windows.Forms.Button bntUpdate;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.BindingSource customerBindingSource;
     }
 }
 

@@ -20,15 +20,30 @@ namespace Contact_Form
             InitializeComponent();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            // Click on the link below to continue learning how to build a desktop app using WinForms!
-            System.Diagnostics.Process.Start("http://aka.ms/dotnet-get-started-desktop");
 
         }
 
-       
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void bntCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bntUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 
